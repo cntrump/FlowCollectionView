@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		15889B4824952B46002BBD8B /* FlowCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 15889B4624952B46002BBD8B /* FlowCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		15889B5324952BAE002BBD8B /* FlowCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15889B4E24952BAE002BBD8B /* FlowCollectionViewCell.m */; };
-		15889B5424952BAE002BBD8B /* FlowCollectionSupplementaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15889B4F24952BAE002BBD8B /* FlowCollectionSupplementaryView.m */; };
-		15889B5524952BAE002BBD8B /* FlowCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15889B5024952BAE002BBD8B /* FlowCollectionView.m */; };
-		15889B5624952BAE002BBD8B /* FlowCollectionSupplementaryView.h in Headers */ = {isa = PBXBuildFile; fileRef = 15889B5124952BAE002BBD8B /* FlowCollectionSupplementaryView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		15889B5724952BAE002BBD8B /* FlowCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 15889B5224952BAE002BBD8B /* FlowCollectionViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15889B4824952B46002BBD8B /* FlowListView.h in Headers */ = {isa = PBXBuildFile; fileRef = 15889B4624952B46002BBD8B /* FlowListView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15889B5324952BAE002BBD8B /* FlowListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15889B4E24952BAE002BBD8B /* FlowListViewCell.m */; };
+		15889B5424952BAE002BBD8B /* FlowListSupplementaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15889B4F24952BAE002BBD8B /* FlowListSupplementaryView.m */; };
+		15889B5524952BAE002BBD8B /* FlowListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15889B5024952BAE002BBD8B /* FlowListView.m */; };
+		15889B5624952BAE002BBD8B /* FlowListSupplementaryView.h in Headers */ = {isa = PBXBuildFile; fileRef = 15889B5124952BAE002BBD8B /* FlowListSupplementaryView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15889B5724952BAE002BBD8B /* FlowListViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 15889B5224952BAE002BBD8B /* FlowListViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		15889B4324952B46002BBD8B /* FlowCollectionView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FlowCollectionView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		15889B4624952B46002BBD8B /* FlowCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlowCollectionView.h; sourceTree = "<group>"; };
+		15889B4324952B46002BBD8B /* FlowListView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FlowListView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		15889B4624952B46002BBD8B /* FlowListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlowListView.h; sourceTree = "<group>"; };
 		15889B4724952B46002BBD8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		15889B4E24952BAE002BBD8B /* FlowCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowCollectionViewCell.m; sourceTree = "<group>"; };
-		15889B4F24952BAE002BBD8B /* FlowCollectionSupplementaryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowCollectionSupplementaryView.m; sourceTree = "<group>"; };
-		15889B5024952BAE002BBD8B /* FlowCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowCollectionView.m; sourceTree = "<group>"; };
-		15889B5124952BAE002BBD8B /* FlowCollectionSupplementaryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowCollectionSupplementaryView.h; sourceTree = "<group>"; };
-		15889B5224952BAE002BBD8B /* FlowCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowCollectionViewCell.h; sourceTree = "<group>"; };
+		15889B4E24952BAE002BBD8B /* FlowListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowListViewCell.m; sourceTree = "<group>"; };
+		15889B4F24952BAE002BBD8B /* FlowListSupplementaryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowListSupplementaryView.m; sourceTree = "<group>"; };
+		15889B5024952BAE002BBD8B /* FlowListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlowListView.m; sourceTree = "<group>"; };
+		15889B5124952BAE002BBD8B /* FlowListSupplementaryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowListSupplementaryView.h; sourceTree = "<group>"; };
+		15889B5224952BAE002BBD8B /* FlowListViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlowListViewCell.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +40,7 @@
 		15889B3924952B46002BBD8B = {
 			isa = PBXGroup;
 			children = (
-				15889B4524952B46002BBD8B /* FlowCollectionView */,
+				15889B4524952B46002BBD8B /* FlowListView */,
 				15889B4424952B46002BBD8B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,23 +48,23 @@
 		15889B4424952B46002BBD8B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				15889B4324952B46002BBD8B /* FlowCollectionView.framework */,
+				15889B4324952B46002BBD8B /* FlowListView.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		15889B4524952B46002BBD8B /* FlowCollectionView */ = {
+		15889B4524952B46002BBD8B /* FlowListView */ = {
 			isa = PBXGroup;
 			children = (
-				15889B5124952BAE002BBD8B /* FlowCollectionSupplementaryView.h */,
-				15889B4F24952BAE002BBD8B /* FlowCollectionSupplementaryView.m */,
-				15889B4624952B46002BBD8B /* FlowCollectionView.h */,
-				15889B5024952BAE002BBD8B /* FlowCollectionView.m */,
-				15889B5224952BAE002BBD8B /* FlowCollectionViewCell.h */,
-				15889B4E24952BAE002BBD8B /* FlowCollectionViewCell.m */,
+				15889B5124952BAE002BBD8B /* FlowListSupplementaryView.h */,
+				15889B4F24952BAE002BBD8B /* FlowListSupplementaryView.m */,
+				15889B4624952B46002BBD8B /* FlowListView.h */,
+				15889B5024952BAE002BBD8B /* FlowListView.m */,
+				15889B5224952BAE002BBD8B /* FlowListViewCell.h */,
+				15889B4E24952BAE002BBD8B /* FlowListViewCell.m */,
 				15889B4724952B46002BBD8B /* Info.plist */,
 			);
-			path = FlowCollectionView;
+			path = FlowListView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,18 +74,18 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15889B5724952BAE002BBD8B /* FlowCollectionViewCell.h in Headers */,
-				15889B4824952B46002BBD8B /* FlowCollectionView.h in Headers */,
-				15889B5624952BAE002BBD8B /* FlowCollectionSupplementaryView.h in Headers */,
+				15889B5724952BAE002BBD8B /* FlowListViewCell.h in Headers */,
+				15889B4824952B46002BBD8B /* FlowListView.h in Headers */,
+				15889B5624952BAE002BBD8B /* FlowListSupplementaryView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		15889B4224952B46002BBD8B /* FlowCollectionView */ = {
+		15889B4224952B46002BBD8B /* FlowListView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 15889B4B24952B46002BBD8B /* Build configuration list for PBXNativeTarget "FlowCollectionView" */;
+			buildConfigurationList = 15889B4B24952B46002BBD8B /* Build configuration list for PBXNativeTarget "FlowListView" */;
 			buildPhases = (
 				15889B3E24952B46002BBD8B /* Headers */,
 				15889B3F24952B46002BBD8B /* Sources */,
@@ -96,9 +96,9 @@
 			);
 			dependencies = (
 			);
-			name = FlowCollectionView;
+			name = FlowListView;
 			productName = FlowCollectionView;
-			productReference = 15889B4324952B46002BBD8B /* FlowCollectionView.framework */;
+			productReference = 15889B4324952B46002BBD8B /* FlowListView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -115,7 +115,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 15889B3D24952B46002BBD8B /* Build configuration list for PBXProject "FlowCollectionView" */;
+			buildConfigurationList = 15889B3D24952B46002BBD8B /* Build configuration list for PBXProject "FlowListView" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -128,7 +128,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				15889B4224952B46002BBD8B /* FlowCollectionView */,
+				15889B4224952B46002BBD8B /* FlowListView */,
 			);
 		};
 /* End PBXProject section */
@@ -148,9 +148,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15889B5424952BAE002BBD8B /* FlowCollectionSupplementaryView.m in Sources */,
-				15889B5524952BAE002BBD8B /* FlowCollectionView.m in Sources */,
-				15889B5324952BAE002BBD8B /* FlowCollectionViewCell.m in Sources */,
+				15889B5424952BAE002BBD8B /* FlowListSupplementaryView.m in Sources */,
+				15889B5524952BAE002BBD8B /* FlowListView.m in Sources */,
+				15889B5324952BAE002BBD8B /* FlowListViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +282,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = FlowCollectionView/Info.plist;
+				INFOPLIST_FILE = FlowListView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -290,7 +290,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = me.lvv.FlowCollectionView;
+				PRODUCT_BUNDLE_IDENTIFIER = me.lvv.FlowListView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -306,7 +306,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = FlowCollectionView/Info.plist;
+				INFOPLIST_FILE = FlowListView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -314,7 +314,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				PRODUCT_BUNDLE_IDENTIFIER = me.lvv.FlowCollectionView;
+				PRODUCT_BUNDLE_IDENTIFIER = me.lvv.FlowListView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -324,7 +324,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		15889B3D24952B46002BBD8B /* Build configuration list for PBXProject "FlowCollectionView" */ = {
+		15889B3D24952B46002BBD8B /* Build configuration list for PBXProject "FlowListView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				15889B4924952B46002BBD8B /* Debug */,
@@ -333,7 +333,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		15889B4B24952B46002BBD8B /* Build configuration list for PBXNativeTarget "FlowCollectionView" */ = {
+		15889B4B24952B46002BBD8B /* Build configuration list for PBXNativeTarget "FlowListView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				15889B4C24952B46002BBD8B /* Debug */,

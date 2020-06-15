@@ -14,23 +14,23 @@
 		1536129C2495D284000162E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1536129B2495D284000162E5 /* Assets.xcassets */; };
 		1536129F2495D284000162E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1536129D2495D284000162E5 /* LaunchScreen.storyboard */; };
 		153612A22495D284000162E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 153612A12495D284000162E5 /* main.m */; };
-		153612B12495D2FB000162E5 /* FlowCollectionView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153612AD2495D2DB000162E5 /* FlowCollectionView.framework */; };
+		156065412497563C00D2ED62 /* FlowListView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1560653E2497561A00D2ED62 /* FlowListView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		153612AC2495D2DB000162E5 /* PBXContainerItemProxy */ = {
+		1560653D2497561A00D2ED62 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 153612A82495D2DB000162E5 /* FlowCollectionView.xcodeproj */;
+			containerPortal = 156065392497561A00D2ED62 /* FlowListView.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 15889B4324952B46002BBD8B;
-			remoteInfo = FlowCollectionView;
+			remoteInfo = FlowListView;
 		};
-		153612AE2495D2F6000162E5 /* PBXContainerItemProxy */ = {
+		1560653F2497563700D2ED62 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 153612A82495D2DB000162E5 /* FlowCollectionView.xcodeproj */;
+			containerPortal = 156065392497561A00D2ED62 /* FlowListView.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 15889B4224952B46002BBD8B;
-			remoteInfo = FlowCollectionView;
+			remoteInfo = FlowListView;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -47,7 +47,7 @@
 		1536129E2495D284000162E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		153612A02495D284000162E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		153612A12495D284000162E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		153612A82495D2DB000162E5 /* FlowCollectionView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FlowCollectionView.xcodeproj; path = ../FlowCollectionView.xcodeproj; sourceTree = "<group>"; };
+		156065392497561A00D2ED62 /* FlowListView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FlowListView.xcodeproj; path = ../FlowListView.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				153612B12495D2FB000162E5 /* FlowCollectionView.framework in Frameworks */,
+				156065412497563C00D2ED62 /* FlowListView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,7 +65,7 @@
 		153612832495D283000162E5 = {
 			isa = PBXGroup;
 			children = (
-				153612A82495D2DB000162E5 /* FlowCollectionView.xcodeproj */,
+				156065392497561A00D2ED62 /* FlowListView.xcodeproj */,
 				1536128E2495D283000162E5 /* examples */,
 				1536128D2495D283000162E5 /* Products */,
 				153612B02495D2FB000162E5 /* Frameworks */,
@@ -98,19 +98,19 @@
 			path = examples;
 			sourceTree = "<group>";
 		};
-		153612A92495D2DB000162E5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				153612AD2495D2DB000162E5 /* FlowCollectionView.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		153612B02495D2FB000162E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1560653A2497561A00D2ED62 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1560653E2497561A00D2ED62 /* FlowListView.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +127,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				153612AF2495D2F6000162E5 /* PBXTargetDependency */,
+				156065402497563700D2ED62 /* PBXTargetDependency */,
 			);
 			name = examples;
 			productName = examples;
@@ -161,8 +161,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 153612A92495D2DB000162E5 /* Products */;
-					ProjectRef = 153612A82495D2DB000162E5 /* FlowCollectionView.xcodeproj */;
+					ProductGroup = 1560653A2497561A00D2ED62 /* Products */;
+					ProjectRef = 156065392497561A00D2ED62 /* FlowListView.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -173,11 +173,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		153612AD2495D2DB000162E5 /* FlowCollectionView.framework */ = {
+		1560653E2497561A00D2ED62 /* FlowListView.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = FlowCollectionView.framework;
-			remoteRef = 153612AC2495D2DB000162E5 /* PBXContainerItemProxy */;
+			path = FlowListView.framework;
+			remoteRef = 1560653D2497561A00D2ED62 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -210,10 +210,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		153612AF2495D2F6000162E5 /* PBXTargetDependency */ = {
+		156065402497563700D2ED62 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = FlowCollectionView;
-			targetProxy = 153612AE2495D2F6000162E5 /* PBXContainerItemProxy */;
+			name = FlowListView;
+			targetProxy = 1560653F2497563700D2ED62 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

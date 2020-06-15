@@ -1,6 +1,6 @@
 //
-//  FlowCollectionSupplementaryView.h
-//  FlowCollectionView
+//  FlowListSupplementaryView.h
+//  FlowListView
 //
 //  Created by v on 2020/6/13.
 //  Copyright © 2020 lvv. All rights reserved.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FlowCollectionSupplementaryView : UICollectionReusableView
+@interface FlowListSupplementaryView : UICollectionReusableView
 
 - (void)willDisplayAtIndexPath:(NSIndexPath *)indexPath;
 

@@ -1,14 +1,14 @@
 //
-//  FlowCollectionViewCell.m
-//  FlowCollectionView
+//  FlowListViewCell.m
+//  FlowListView
 //
 //  Created by v on 2020/6/13.
 //  Copyright © 2020 lvv. All rights reserved.
 //
 
-#import "FlowCollectionViewCell.h"
+#import "FlowListViewCell.h"
 
-@implementation FlowCollectionViewCell
+@implementation FlowListViewCell
 
 - (void)willReuseAtIndexPath:(NSIndexPath *)indexPath {
 }

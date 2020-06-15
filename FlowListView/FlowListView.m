@@ -1,22 +1,22 @@
 //
-//  FlowCollectionView.m
-//  FlowCollectionView
+//  FlowListView.m
+//  FlowListView
 //
 //  Created by v on 2020/6/13.
 //  Copyright © 2020 lvv. All rights reserved.
 //
 
-#import "FlowCollectionView.h"
-#import "FlowCollectionSupplementaryView.h"
-#import "FlowCollectionViewCell.h"
+#import "FlowListView.h"
+#import "FlowListSupplementaryView.h"
+#import "FlowListViewCell.h"
 
-@interface FlowCollectionView () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout> {
+@interface FlowListView () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout> {
 
 }
 
 @end
 
-@implementation FlowCollectionView
+@implementation FlowListView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
@@ -64,8 +64,8 @@
         cell = _cellForIndexPathBlock(self, ^UICollectionViewCell * (Class cellClass) {
                    return [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass(cellClass) forIndexPath:indexPath];
                }, indexPath);
-        if ([cell isKindOfClass:FlowCollectionViewCell.class]) {
-            [(FlowCollectionViewCell *)cell willReuseAtIndexPath:indexPath];
+        if ([cell isKindOfClass:FlowListViewCell.class]) {
+            [(FlowListViewCell *)cell willReuseAtIndexPath:indexPath];
         }
     }
 
@@ -186,8 +186,8 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath API_AVAILABLE(ios(8.0)) {
-    if ([cell isKindOfClass:FlowCollectionViewCell.class]) {
-        [(FlowCollectionViewCell *)cell willDisplayAtIndexPath:indexPath];
+    if ([cell isKindOfClass:FlowListViewCell.class]) {
+        [(FlowListViewCell *)cell willDisplayAtIndexPath:indexPath];
     }
 
     if (_willDisplayCellBlock) {
@@ -196,8 +196,8 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplaySupplementaryView:(UICollectionReusableView *)view forElementKind:(NSString *)elementKind atIndexPath:(NSIndexPath *)indexPath API_AVAILABLE(ios(8.0)) {
-    if ([view isKindOfClass:FlowCollectionSupplementaryView.class]) {
-        [(FlowCollectionSupplementaryView *)view willDisplayAtIndexPath:indexPath];
+    if ([view isKindOfClass:FlowListSupplementaryView.class]) {
+        [(FlowListSupplementaryView *)view willDisplayAtIndexPath:indexPath];
     }
 
     if (_willDisplaySupplementaryViewBlock) {
