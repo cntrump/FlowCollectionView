@@ -13,7 +13,25 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class FlowListViewDataSource;
+
 @interface FlowListView : UICollectionView
+
+@property(nonatomic, strong) FlowListViewDataSource *dataSourceProvider;
+
+- (instancetype)initWithFrame:(CGRect)frame;
+
+- (void)registerCellClass:(Class)cellClass;
+
+- (void)registerHeaderViewClass:(Class)viewClass;
+
+- (void)registerFooterViewClass:(Class)viewClass;
+
+@end
+
+#pragma mark - FlowListViewDataSource
+
+@interface FlowListViewDataSource : NSObject
 
 @property(nonatomic, copy) NSInteger (^numberOfSectionsBlock)(FlowListView *collectionView);
 
@@ -46,14 +64,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, copy) void (^willDisplayCellBlock)(FlowListView *collectionView, UICollectionViewCell *cell, NSIndexPath *indexPath);
 
 @property(nonatomic, copy) void (^willDisplaySupplementaryViewBlock)(FlowListView *collectionView, UICollectionReusableView *view, NSString *kind, NSIndexPath *indexPath);
-
-- (instancetype)initWithFrame:(CGRect)frame;
-
-- (void)registerCellClass:(Class)cellClass;
-
-- (void)registerHeaderViewClass:(Class)viewClass;
-
-- (void)registerFooterViewClass:(Class)viewClass;
 
 @end
 

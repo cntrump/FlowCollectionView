@@ -10,6 +10,12 @@
 #import "FlowListSupplementaryView.h"
 #import "FlowListViewCell.h"
 
+@implementation FlowListViewDataSource
+
+@end
+
+#pragma mark -
+
 @interface FlowListView () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout> {
 
 }
@@ -49,8 +55,8 @@
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    if (_numberOfItemsInSectionBlock) {
-        return _numberOfItemsInSectionBlock(self);
+    if (_dataSourceProvider.numberOfItemsInSectionBlock) {
+        return _dataSourceProvider.numberOfItemsInSectionBlock(self);
     }
 
     return 0;
@@ -60,8 +66,8 @@
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = nil;
 
-    if (_cellForIndexPathBlock) {
-        cell = _cellForIndexPathBlock(self, ^UICollectionViewCell * (Class cellClass) {
+    if (_dataSourceProvider.cellForIndexPathBlock) {
+        cell = _dataSourceProvider.cellForIndexPathBlock(self, ^UICollectionViewCell * (Class cellClass) {
                    return [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass(cellClass) forIndexPath:indexPath];
                }, indexPath);
         if ([cell isKindOfClass:FlowListViewCell.class]) {
@@ -73,8 +79,8 @@
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    if (_numberOfSectionsBlock) {
-        return _numberOfSectionsBlock(self);
+    if (_dataSourceProvider.numberOfSectionsBlock) {
+        return _dataSourceProvider.numberOfSectionsBlock(self);
     }
 
     return 1;
@@ -84,14 +90,14 @@
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     UICollectionReusableView *view = nil;
 
-    if ([kind isEqualToString:UICollectionElementKindSectionHeader] && _headerViewForIndexPathBlock) {
-        view = _headerViewForIndexPathBlock(self, ^UICollectionReusableView * (Class viewClass) {
+    if ([kind isEqualToString:UICollectionElementKindSectionHeader] && _dataSourceProvider.headerViewForIndexPathBlock) {
+        view = _dataSourceProvider.headerViewForIndexPathBlock(self, ^UICollectionReusableView * (Class viewClass) {
                    return [collectionView dequeueReusableSupplementaryViewOfKind:kind
                                                       withReuseIdentifier:NSStringFromClass(viewClass)
                                                              forIndexPath:indexPath];
                }, indexPath);
-    } else if ([kind isEqualToString:UICollectionElementKindSectionFooter] && _footerViewForIndexPathBlock) {
-        view = _footerViewForIndexPathBlock(self, ^UICollectionReusableView * (Class viewClass) {
+    } else if ([kind isEqualToString:UICollectionElementKindSectionFooter] && _dataSourceProvider.footerViewForIndexPathBlock) {
+        view = _dataSourceProvider.footerViewForIndexPathBlock(self, ^UICollectionReusableView * (Class viewClass) {
                    return [collectionView dequeueReusableSupplementaryViewOfKind:kind
                                                       withReuseIdentifier:NSStringFromClass(viewClass)
                                                              forIndexPath:indexPath];
@@ -102,16 +108,16 @@
 }
 
 - (BOOL)collectionView:(UICollectionView *)collectionView canMoveItemAtIndexPath:(NSIndexPath *)indexPath API_AVAILABLE(ios(9.0)) {
-    if (_canMoveItemBlock) {
-        return _canMoveItemBlock(self, indexPath);
+    if (_dataSourceProvider.canMoveItemBlock) {
+        return _dataSourceProvider.canMoveItemBlock(self, indexPath);
     }
 
     return NO;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView moveItemAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath*)destinationIndexPath API_AVAILABLE(ios(9.0)) {
-    if (_moveItemBlock) {
-        _moveItemBlock(self, sourceIndexPath, destinationIndexPath);
+    if (_dataSourceProvider.moveItemBlock) {
+        _dataSourceProvider.moveItemBlock(self, sourceIndexPath, destinationIndexPath);
     }
 }
 
@@ -120,8 +126,8 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     CGSize size = CGSizeZero;
 
-    if (_sizeForItemBlock) {
-        size = _sizeForItemBlock(self, indexPath);
+    if (_dataSourceProvider.sizeForItemBlock) {
+        size = _dataSourceProvider.sizeForItemBlock(self, indexPath);
     }
 
     return size;
@@ -130,8 +136,8 @@
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     UIEdgeInsets inset = UIEdgeInsetsZero;
 
-    if (_insetForSectionBlock) {
-        inset = _insetForSectionBlock(self, section);
+    if (_dataSourceProvider.insetForSectionBlock) {
+        inset = _dataSourceProvider.insetForSectionBlock(self, section);
     }
 
     return inset;
@@ -140,8 +146,8 @@
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
     CGFloat lineSpacing = 0;
 
-    if (_minimumLineSpacingForSectionBlock) {
-        lineSpacing = _minimumLineSpacingForSectionBlock(self, section);
+    if (_dataSourceProvider.minimumLineSpacingForSectionBlock) {
+        lineSpacing = _dataSourceProvider.minimumLineSpacingForSectionBlock(self, section);
     }
 
     return lineSpacing;
@@ -150,8 +156,8 @@
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
     CGFloat interitemSpacing = 0;
 
-    if (_minimumInteritemSpacingForSectionBlock) {
-        interitemSpacing = _minimumInteritemSpacingForSectionBlock(self, section);
+    if (_dataSourceProvider.minimumInteritemSpacingForSectionBlock) {
+        interitemSpacing = _dataSourceProvider.minimumInteritemSpacingForSectionBlock(self, section);
     }
 
     return interitemSpacing;
@@ -160,8 +166,8 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
     CGSize size = CGSizeZero;
 
-    if (_sizeForHeaderInSectionBlock) {
-        size = _sizeForHeaderInSectionBlock(self, section);
+    if (_dataSourceProvider.sizeForHeaderInSectionBlock) {
+        size = _dataSourceProvider.sizeForHeaderInSectionBlock(self, section);
     }
 
     return size;
@@ -170,8 +176,8 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
     CGSize size = CGSizeZero;
 
-    if (_sizeForFooterInSectionBlock) {
-        size = _sizeForFooterInSectionBlock(self, section);
+    if (_dataSourceProvider.sizeForFooterInSectionBlock) {
+        size = _dataSourceProvider.sizeForFooterInSectionBlock(self, section);
     }
 
     return size;
@@ -180,8 +186,8 @@
 #pragma mark - UICollectionViewDelegate
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (_didSelectItemBlock) {
-        _didSelectItemBlock(self, indexPath);
+    if (_dataSourceProvider.didSelectItemBlock) {
+        _dataSourceProvider.didSelectItemBlock(self, indexPath);
     }
 }
 
@@ -190,8 +196,8 @@
         [(FlowListViewCell *)cell willDisplayAtIndexPath:indexPath];
     }
 
-    if (_willDisplayCellBlock) {
-        _willDisplayCellBlock(self, cell, indexPath);
+    if (_dataSourceProvider.willDisplayCellBlock) {
+        _dataSourceProvider.willDisplayCellBlock(self, cell, indexPath);
     }
 }
 
@@ -200,8 +206,8 @@
         [(FlowListSupplementaryView *)view willDisplayAtIndexPath:indexPath];
     }
 
-    if (_willDisplaySupplementaryViewBlock) {
-        _willDisplaySupplementaryViewBlock(self, view, elementKind, indexPath);
+    if (_dataSourceProvider.willDisplaySupplementaryViewBlock) {
+        _dataSourceProvider.willDisplaySupplementaryViewBlock(self, view, elementKind, indexPath);
     }
 }
 
